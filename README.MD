@@ -53,7 +53,10 @@ github上的缺少数据集、预训练模型、提交paddle文件
 		
 	2) yolo模型转为paddle模型
 	   python export.py
-	   会生成 best-seg_paddle_model目录文件,即为paddle模型文件，拷贝至submit_files文件夹覆盖即可.
+	   cp best_0.87335_paddle_model/inference_model/* ../submit_files/best-seg_paddle_model/inference_model/
+
+	   默认将yolov5根目录的best_0.87335.pt转为paddle模型；
+	   如果重新训练，则将训练后的模型拷贝覆盖该模型再转换即可
 	
 	5.进入目录打包所有文件提交
 	   cd submit_files
